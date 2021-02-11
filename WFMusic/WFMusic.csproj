@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="button.Designer.cs">
+      <DependentUpon>button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaire.Designer.cs">
+      <DependentUpon>Formulaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="navigation.Designer.cs">
+      <DependentUpon>navigation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="button.resx">
+      <DependentUpon>button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire.resx">
+      <DependentUpon>Formulaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navigation.resx">
+      <DependentUpon>navigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
