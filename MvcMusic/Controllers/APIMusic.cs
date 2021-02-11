@@ -41,7 +41,6 @@ namespace MvcMusic.Controllers
                 return NotFound();
             }
 
-            //return ItemToDTO(music);
             return CreatedAtAction(
                     nameof(GetMusic),
                     new { id = music.Id },
