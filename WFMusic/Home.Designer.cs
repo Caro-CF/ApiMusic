@@ -30,9 +30,10 @@ namespace WFMusic
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.formulaire1 = new WFMusic.Formulaire();
-            this.button1 = new WFMusic.button();
             this.navigation1 = new WFMusic.navigation();
+            this.button1 = new WFMusic.button();
+            this.formulaire1 = new WFMusic.Formulaire();
+            this.musicList1 = new WFMusic.musicList();
             this.SuspendLayout();
             // 
             // label1
@@ -47,13 +48,14 @@ namespace WFMusic
             this.label1.Text = "Music Application";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // formulaire1
+            // navigation1
             // 
-            this.formulaire1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.formulaire1.Location = new System.Drawing.Point(57, 60);
-            this.formulaire1.Name = "formulaire1";
-            this.formulaire1.Size = new System.Drawing.Size(472, 351);
-            this.formulaire1.TabIndex = 21;
+            this.navigation1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.navigation1.Location = new System.Drawing.Point(472, 342);
+            this.navigation1.Name = "navigation1";
+            this.navigation1.Size = new System.Drawing.Size(237, 49);
+            this.navigation1.TabIndex = 23;
+            this.navigation1.Load += new System.EventHandler(this.navigation1_Load);
             // 
             // button1
             // 
@@ -62,21 +64,32 @@ namespace WFMusic
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(674, 64);
             this.button1.TabIndex = 22;
+            this.button1.Load += new System.EventHandler(this.button1_Load);
             // 
-            // navigation1
+            // formulaire1
             // 
-            this.navigation1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.navigation1.Location = new System.Drawing.Point(472, 342);
-            this.navigation1.Name = "navigation1";
-            this.navigation1.Size = new System.Drawing.Size(237, 49);
-            this.navigation1.TabIndex = 23;
+            this.formulaire1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formulaire1.Location = new System.Drawing.Point(57, 60);
+            this.formulaire1.Name = "formulaire1";
+            this.formulaire1.Size = new System.Drawing.Size(472, 351);
+            this.formulaire1.TabIndex = 21;
+            this.formulaire1.Load += new System.EventHandler(this.formulaire1_Load);
+            // 
+            // musicList1
+            // 
+            this.musicList1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musicList1.Location = new System.Drawing.Point(12, 60);
+            this.musicList1.Name = "musicList1";
+            this.musicList1.Size = new System.Drawing.Size(924, 521);
+            this.musicList1.TabIndex = 24;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(767, 523);
+            this.ClientSize = new System.Drawing.Size(932, 523);
+            this.Controls.Add(this.musicList1);
             this.Controls.Add(this.navigation1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.formulaire1);
@@ -94,6 +107,7 @@ namespace WFMusic
         private Formulaire formulaire1;
         private button button1;
         private navigation navigation1;
+        private musicList musicList1;
     }
 }
 

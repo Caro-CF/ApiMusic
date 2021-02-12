@@ -51,5 +51,20 @@ namespace WFMusic
         {
 
         }
+
+        private void formulaire1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navigation1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

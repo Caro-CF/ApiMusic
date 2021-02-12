@@ -64,6 +64,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="musicList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="musicList.Designer.cs">
+      <DependentUpon>musicList.cs</DependentUpon>
+    </Compile>
     <Compile Include="navigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musicList.resx">
+      <DependentUpon>musicList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="navigation.resx">
       <DependentUpon>navigation.cs</DependentUpon>

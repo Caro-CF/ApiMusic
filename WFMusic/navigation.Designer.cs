@@ -29,39 +29,41 @@ namespace WFMusic
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.previous = new System.Windows.Forms.Button();
+            this.next = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button6
+            // previous
             // 
-            this.button6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(19, 15);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 23);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "<< Previous";
-            this.button6.UseVisualStyleBackColor = false;
+            this.previous.BackColor = System.Drawing.Color.RoyalBlue;
+            this.previous.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.previous.Location = new System.Drawing.Point(19, 15);
+            this.previous.Name = "previous";
+            this.previous.Size = new System.Drawing.Size(95, 23);
+            this.previous.TabIndex = 22;
+            this.previous.Text = "<< Previous";
+            this.previous.UseVisualStyleBackColor = false;
+            this.previous.Click += new System.EventHandler(this.previous_Click);
             // 
-            // button5
+            // next
             // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(125, 15);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 23);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Next >>";
-            this.button5.UseVisualStyleBackColor = false;
+            this.next.BackColor = System.Drawing.Color.RoyalBlue;
+            this.next.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.next.Location = new System.Drawing.Point(125, 15);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(94, 23);
+            this.next.TabIndex = 21;
+            this.next.Text = "Next >>";
+            this.next.UseVisualStyleBackColor = false;
+            this.next.Click += new System.EventHandler(this.button5_Click);
             // 
             // navigation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.previous);
+            this.Controls.Add(this.next);
             this.Name = "navigation";
             this.Size = new System.Drawing.Size(237, 49);
             this.ResumeLayout(false);
@@ -70,7 +72,7 @@ namespace WFMusic
 
         #endregion
 
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button previous;
+        private System.Windows.Forms.Button next;
     }
 }

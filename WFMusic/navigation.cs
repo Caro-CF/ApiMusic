@@ -12,9 +12,21 @@ namespace WFMusic
 {
     public partial class navigation : UserControl
     {
+        public delegate void DelegateClickButton(string bouton);
+        public event DelegateClickButton clickBtn;
         public navigation()
         {
             InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void previous_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
