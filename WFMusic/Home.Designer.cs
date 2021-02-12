@@ -32,7 +32,6 @@ namespace WFMusic
             this.label1 = new System.Windows.Forms.Label();
             this.musicList1 = new WFMusic.musicList();
             this.navigation1 = new WFMusic.navigation();
-            this.button1 = new WFMusic.button();
             this.formulaire1 = new WFMusic.Formulaire();
             this.SuspendLayout();
             // 
@@ -51,9 +50,9 @@ namespace WFMusic
             // musicList1
             // 
             this.musicList1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musicList1.Location = new System.Drawing.Point(12, 12);
+            this.musicList1.Location = new System.Drawing.Point(27, 72);
             this.musicList1.Name = "musicList1";
-            this.musicList1.Size = new System.Drawing.Size(924, 521);
+            this.musicList1.Size = new System.Drawing.Size(1063, 521);
             this.musicList1.TabIndex = 24;
             this.musicList1.Load += new System.EventHandler(this.musicList1_Load);
             // 
@@ -66,14 +65,7 @@ namespace WFMusic
             this.navigation1.TabIndex = 23;
             this.navigation1.Load += new System.EventHandler(this.navigation1_Load);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(45, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(674, 64);
-            this.button1.TabIndex = 22;
-            this.button1.Load += new System.EventHandler(this.button1_Load);
+            
             // 
             // formulaire1
             // 
@@ -89,14 +81,14 @@ namespace WFMusic
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(932, 523);
+            this.ClientSize = new System.Drawing.Size(1121, 649);
             this.Controls.Add(this.musicList1);
             this.Controls.Add(this.navigation1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.formulaire1);
             this.Controls.Add(this.label1);
             this.Name = "Home";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +98,6 @@ namespace WFMusic
 
         private System.Windows.Forms.Label label1;
         private Formulaire formulaire1;
-        private button button1;
         private navigation navigation1;
         private musicList musicList1;
     }

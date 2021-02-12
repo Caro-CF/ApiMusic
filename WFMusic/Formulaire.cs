@@ -18,7 +18,7 @@ namespace WFMusic
             cbValidate.Checked = true;
         }
 
-        private void tbTitle_TextChanged(object sender, EventArgs e)
+        public void tbTitle_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -26,6 +26,12 @@ namespace WFMusic
         private void tbArtist_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void create_Click(object sender, EventArgs e)
+        {
+            var reponse = await APICall.Post(tbTitle.Text, tbArtist.Text);
+            //ou je l'envoie ? envoie = APICall.formatJSON(reponse);
         }
     }
 }

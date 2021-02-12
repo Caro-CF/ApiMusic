@@ -53,12 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APICall.cs" />
-    <Compile Include="button.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="button.Designer.cs">
-      <DependentUpon>button.cs</DependentUpon>
-    </Compile>
     <Compile Include="data.cs" />
     <Compile Include="Formulaire.cs">
       <SubType>UserControl</SubType>
@@ -86,9 +80,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="button.resx">
-      <DependentUpon>button.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formulaire.resx">
       <DependentUpon>Formulaire.cs</DependentUpon>
     </EmbeddedResource>

@@ -17,19 +17,15 @@ namespace WFMusic
         {
             InitializeComponent();
 
+            Formulaire formulaire = new Formulaire();
+
+
             //Appel API
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:44387/");
             HttpResponseMessage reponse = client.GetAsync("api/Music").Result;
             var data = reponse.Content.ReadAsAsync<IEnumerable<data>>().Result;
-            dataGridView1.DataSource = data;
-            textBox1.Text = data.ToString();
-
-
-
-
-
-
+            dataGridView1.DataSource = data;     
 
 
 
@@ -63,20 +59,20 @@ namespace WFMusic
 
         }
 
-        private void musicList_Load(object sender, EventArgs e)
+        private async void musicList_Load(object sender, EventArgs e)
         {
-
+            var reponse = await APICall.GetALL();
+            textBox1.Text = APICall.formatJson(reponse);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+                        
         }
 
-        private async void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*var reponse = await APICall.GetALL();
-            textBox1.Text = reponse;*/
+            
         }
     }
 }

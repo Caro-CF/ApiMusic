@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -29,6 +31,82 @@ namespace WFMusic
                 }
             }
             return string.Empty;
+        }
+
+        public static async Task<string> GetById(int id)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.GetAsync(URL + "/" + id))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+        public static async Task<string> Post(string title, string artist)
+        {
+            var inputData = new Dictionary<string, string>
+            {
+                {"title", title },
+                {"artist", artist }
+            };
+            var input = new FormUrlEncodedContent(inputData);
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.PostAsync(URL, input))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+
+        public static async Task<string> PostById(int id, string title, string artist)
+        {
+            var inputData = new Dictionary<string, string>
+            {
+                {"title", title },
+                {"artist", artist }
+            };
+            var input = new FormUrlEncodedContent(inputData);
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.PostAsync(URL + "/" + id, input))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+        public static string formatJson (string jsonstr)
+        {
+            JToken parseJson = JToken.Parse(jsonstr);
+            return parseJson.ToString(Formatting.Indented);
         }
 
     }

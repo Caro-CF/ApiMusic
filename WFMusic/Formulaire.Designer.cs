@@ -43,6 +43,10 @@ namespace WFMusic
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.delete = new System.Windows.Forms.Button();
+            this.details = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.create = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbRating
@@ -176,11 +180,60 @@ namespace WFMusic
             this.label2.TabIndex = 19;
             this.label2.Text = "Title :";
             // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.SlateBlue;
+            this.delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.delete.Location = new System.Drawing.Point(525, 351);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(130, 36);
+            this.delete.TabIndex = 36;
+            this.delete.Text = "Delete";
+            this.delete.UseVisualStyleBackColor = false;
+            // 
+            // details
+            // 
+            this.details.BackColor = System.Drawing.Color.SlateBlue;
+            this.details.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.details.Location = new System.Drawing.Point(362, 351);
+            this.details.Name = "details";
+            this.details.Size = new System.Drawing.Size(130, 36);
+            this.details.TabIndex = 35;
+            this.details.Text = "Details";
+            this.details.UseVisualStyleBackColor = false;
+            // 
+            // edit
+            // 
+            this.edit.BackColor = System.Drawing.Color.SlateBlue;
+            this.edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.edit.Location = new System.Drawing.Point(200, 351);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(130, 36);
+            this.edit.TabIndex = 34;
+            this.edit.Text = "Edit";
+            this.edit.UseVisualStyleBackColor = false;
+            // 
+            // create
+            // 
+            this.create.BackColor = System.Drawing.Color.SlateBlue;
+            this.create.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.create.Location = new System.Drawing.Point(33, 351);
+            this.create.Name = "create";
+            this.create.Size = new System.Drawing.Size(130, 36);
+            this.create.TabIndex = 33;
+            this.create.Text = "Create";
+            this.create.UseVisualStyleBackColor = false;
+            this.create.Click += new System.EventHandler(this.create_Click);
+            // 
             // Formulaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.details);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.create);
             this.Controls.Add(this.tbRating);
             this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.tbGenre);
@@ -196,7 +249,7 @@ namespace WFMusic
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Formulaire";
-            this.Size = new System.Drawing.Size(409, 351);
+            this.Size = new System.Drawing.Size(672, 418);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +271,9 @@ namespace WFMusic
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button details;
+        private System.Windows.Forms.Button edit;
+        private System.Windows.Forms.Button create;
     }
 }
