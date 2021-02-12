@@ -13,6 +13,7 @@ namespace WFMusic
 {
     public partial class musicList : UserControl
     {
+        
         public musicList()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace WFMusic
             HttpResponseMessage reponse = client.GetAsync("api/Music").Result;
             var data = reponse.Content.ReadAsAsync<IEnumerable<data>>().Result;
             dataGridView1.DataSource = data;     
+
+            
 
 
 
@@ -67,7 +70,8 @@ namespace WFMusic
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                        
+            var selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as data;
+            textBox1.Text = selectedRow.Title;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

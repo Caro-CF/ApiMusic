@@ -54,12 +54,19 @@ namespace WFMusic
 
         public static async Task<string> Post(string title, string artist)
         {
-            var inputData = new Dictionary<string, string>
+            /* var inputData = new Dictionary<string, string>
+             {
+                 {"title", title },
+                 {"artist", artist }
+             };*/
+            var list = new List<data>();
+            list.Add(new data()
             {
-                {"title", title },
-                {"artist", artist }
-            };
-            var input = new FormUrlEncodedContent(inputData);
+                Title = title ,
+                Artist = artist ,
+                
+            });
+            var input = new FormUrlEncodedContent((IEnumerable<KeyValuePair<string, string>>)list);
             using (HttpClient client = new HttpClient())
             {
                 using (HttpResponseMessage res = await client.PostAsync(URL, input))
