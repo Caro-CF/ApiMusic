@@ -30,10 +30,10 @@ namespace WFMusic
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.musicList1 = new WFMusic.musicList();
             this.navigation1 = new WFMusic.navigation();
             this.button1 = new WFMusic.button();
             this.formulaire1 = new WFMusic.Formulaire();
-            this.musicList1 = new WFMusic.musicList();
             this.SuspendLayout();
             // 
             // label1
@@ -47,6 +47,15 @@ namespace WFMusic
             this.label1.TabIndex = 0;
             this.label1.Text = "Music Application";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // musicList1
+            // 
+            this.musicList1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musicList1.Location = new System.Drawing.Point(12, 12);
+            this.musicList1.Name = "musicList1";
+            this.musicList1.Size = new System.Drawing.Size(924, 521);
+            this.musicList1.TabIndex = 24;
+            this.musicList1.Load += new System.EventHandler(this.musicList1_Load);
             // 
             // navigation1
             // 
@@ -74,14 +83,6 @@ namespace WFMusic
             this.formulaire1.Size = new System.Drawing.Size(472, 351);
             this.formulaire1.TabIndex = 21;
             this.formulaire1.Load += new System.EventHandler(this.formulaire1_Load);
-            // 
-            // musicList1
-            // 
-            this.musicList1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musicList1.Location = new System.Drawing.Point(12, 60);
-            this.musicList1.Name = "musicList1";
-            this.musicList1.Size = new System.Drawing.Size(924, 521);
-            this.musicList1.TabIndex = 24;
             // 
             // Home
             // 

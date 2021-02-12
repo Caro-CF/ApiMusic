@@ -10,7 +10,7 @@ using MvcMusic.Models;
 
 namespace MvcMusic.Controllers
 {
-    [Route("api/Music")]
+    [Route("api/Music")] 
     [ApiController]
     public class APIMusic : ControllerBase
     {

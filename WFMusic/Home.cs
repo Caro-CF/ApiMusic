@@ -66,5 +66,10 @@ namespace WFMusic
         {
 
         }
+
+        private void musicList1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

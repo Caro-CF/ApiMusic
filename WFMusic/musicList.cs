@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
 
 namespace WFMusic
 {
@@ -16,8 +17,23 @@ namespace WFMusic
         {
             InitializeComponent();
 
+            //Appel API
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:44387/");
+            HttpResponseMessage reponse = client.GetAsync("api/Music").Result;
+            var data = reponse.Content.ReadAsAsync<IEnumerable<data>>().Result;
+            dataGridView1.DataSource = data;
+            textBox1.Text = data.ToString();
 
-            // Create an instance of the ListBox.
+
+
+
+
+
+
+
+
+            /*// Create an instance of the ListBox.
             ListBox listBox1 = new ListBox();
             // Set the size and location of the ListBox.
             listBox1.Size = new System.Drawing.Size(200, 100);
@@ -37,17 +53,8 @@ namespace WFMusic
                 listBox1.Items.Add("Item " + x.ToString());
             }
             // Allow the ListBox to repaint and display the new items.
-            listBox1.EndUpdate();
+            listBox1.EndUpdate();*/
 
-            // Select three items from the ListBox.
-            listBox1.SetSelected(1, true);
-            listBox1.SetSelected(3, true);
-            listBox1.SetSelected(5, true);
-
-            // Display the second selected item in the ListBox to the console.
-            System.Diagnostics.Debug.WriteLine(listBox1.SelectedItems[1].ToString());
-            // Display the index of the first selected item in the ListBox.
-            System.Diagnostics.Debug.WriteLine(listBox1.SelectedIndices[0].ToString());
 
         }
 
@@ -59,6 +66,17 @@ namespace WFMusic
         private void musicList_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private async void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            /*var reponse = await APICall.GetALL();
+            textBox1.Text = reponse;*/
         }
     }
 }
