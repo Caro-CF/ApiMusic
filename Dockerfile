@@ -12,6 +12,9 @@ COPY MvcMusic/. ./MvcMusic/
 WORKDIR /source/MvcMusic
 RUN dotnet publish -c release -o /app -r linux-x64 --self-contained false --no-restore
 
+# sql migration
+RUN dotnet tool install --global dotnet-ef && export PATH="$PATH:/root/.dotnet/tools" && dotnet ef database update
+
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:5.0-focal-amd64
 WORKDIR /app
